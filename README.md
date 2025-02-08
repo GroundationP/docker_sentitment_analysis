@@ -1,4 +1,4 @@
-# docker_sentitment_analysis
+## Docker sentitment analysis
 
 In this example, a CI/CD pipeline was created to automatically test an API before deployment. The API is based on a sentiment analysis algorithm, packaged in a Docker image, which predicts whether an English sentence has a positive or negative sentiment.
 
@@ -14,4 +14,9 @@ Authentication Test: GET requests is sent to /permissions using two pre-register
 Authorization Test: It ensures that bob has access to version v1 only, while Alice can access both versions. The sentences "life is beautiful" and "that sucks" will be used to test the API’s sentiment prediction capability.
 
 Each test will be executed in separate containers and will generate a log file describing the results of each test.
+
+####  Setup
+mkdir sent_an
+cd sent_an
+./setup.sh
 
