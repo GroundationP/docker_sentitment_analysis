@@ -1,0 +1,84 @@
+fast_api  | INFO:     Started server process [7]
+fast_api  | INFO:     Waiting for application startup.
+fast_api  | INFO:     Application startup complete.
+fast_api  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+fast_api  | INFO:     172.20.0.3:46532 - "GET /permissions?username=alice&password=wonderland HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.4:44060 - "GET /v1/sentiment?username=alice&password=wonderland&sentence=life+is+beautiful HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.4:44076 - "GET /v2/sentiment?username=alice&password=wonderland&sentence=life+is+beautiful HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.3:46538 - "GET /permissions?username=bob&password=builder HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.3:46552 - "GET /permissions?username=clementine&password=mandarine HTTP/1.1" 403 Forbidden
+fast_api  | INFO:     172.20.0.4:44084 - "GET /v1/sentiment?username=bob&password=builder&sentence=life+is+beautiful HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.4:44092 - "GET /v2/sentiment?username=bob&password=builder&sentence=life+is+beautiful HTTP/1.1" 403 Forbidden
+fast_api  | INFO:     172.20.0.5:35434 - "GET /v1/sentiment?username=alice&password=wonderland&sentence=life+is+beautiful HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.5:35438 - "GET /v2/sentiment?username=alice&password=wonderland&sentence=life+is+beautiful HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.5:35446 - "GET /v1/sentiment?username=alice&password=wonderland&sentence=that+sucks HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.5:35454 - "GET /v2/sentiment?username=alice&password=wonderland&sentence=that+sucks HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.5:35460 - "GET /v1/sentiment?username=bob&password=builder&sentence=life+is+beautiful HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.5:35474 - "GET /v2/sentiment?username=bob&password=builder&sentence=life+is+beautiful HTTP/1.1" 403 Forbidden
+fast_api  | INFO:     172.20.0.5:35476 - "GET /v1/sentiment?username=bob&password=builder&sentence=that+sucks HTTP/1.1" 200 OK
+fast_api  | INFO:     172.20.0.5:35484 - "GET /v2/sentiment?username=bob&password=builder&sentence=that+sucks HTTP/1.1" 403 Forbidden
+fast_api  | INFO:     172.20.0.5:35490 - "GET /v1/sentiment?username=clementine&password=mandarine&sentence=life+is+beautiful HTTP/1.1" 403 Forbidden
+fast_api  | INFO:     172.20.0.5:35498 - "GET /v2/sentiment?username=clementine&password=mandarine&sentence=life+is+beautiful HTTP/1.1" 403 Forbidden
+fast_api  | INFO:     172.20.0.5:35500 - "GET /v1/sentiment?username=clementine&password=mandarine&sentence=that+sucks HTTP/1.1" 403 Forbidden
+fast_api  | INFO:     172.20.0.5:35510 - "GET /v2/sentiment?username=clementine&password=mandarine&sentence=that+sucks HTTP/1.1" 403 Forbidden
+test_authentication  | /script
+test_authentication  | auth_test.py
+test_authentication  | authz_test.py
+test_authentication  | content_test.py
+test_authentication  | log.txt
+test_authentication  | ******** Starting authentification test ********
+test_authentication  | 
+test_authorization   | /script
+test_authorization   | auth_test.py
+test_authorization   | authz_test.py
+test_authorization   | content_test.py
+test_authorization   | log.txt
+test_authorization   | ******** Starting authorization test ********
+test_authorization   | The versions V1 and V2 works for alice
+test_authorization   | write to file
+test_authorization   | =================================================
+sentence_test        | /script
+sentence_test        | auth_test.py
+sentence_test        | authz_test.py
+sentence_test        | content_test.py
+sentence_test        | log.txt
+sentence_test        | ******** Starting Content test ********
+sentence_test        | {"username":"alice","version":"v1","sentence":"life is beautiful","score":0.5994}
+test_authorization   | User not recognized
+test_authorization   | The version V1 only works for bob
+test_authorization   | write to file
+test_authorization   | =================================================
+test_authentication  |  ==> Authentication test at permissions: username=alice, password=wonderland, expected result = 200, actual result = 200, SUCCESS
+test_authentication  | write to file
+test_authentication  | =================================================
+test_authentication  | 
+sentence_test        | {"username":"alice","version":"v2","sentence":"life is beautiful","score":0.5994}
+sentence_test        | write to file
+sentence_test        | =================================================
+sentence_test        | {"username":"alice","version":"v1","sentence":"that sucks","score":-0.3612}
+sentence_test        | {"username":"alice","version":"v2","sentence":"that sucks","score":-0.3612}
+sentence_test        | write to file
+sentence_test        | =================================================
+sentence_test        | {"username":"bob","version":"v1","sentence":"life is beautiful","score":0.5994}
+sentence_test        | {"detail":"This service is not included in your plan."}
+sentence_test        | write to file
+sentence_test        | =================================================
+sentence_test        | {"username":"bob","version":"v1","sentence":"that sucks","score":-0.3612}
+sentence_test        | {"detail":"This service is not included in your plan."}
+sentence_test        | write to file
+sentence_test        | =================================================
+sentence_test        | {"detail":"Authentication failed"}
+sentence_test        | {"detail":"Authentication failed"}
+sentence_test        | write to file
+sentence_test        | =================================================
+sentence_test        | {"detail":"Authentication failed"}
+sentence_test        | {"detail":"Authentication failed"}
+sentence_test        | write to file
+sentence_test        | =================================================
+test_authentication  |  ==> Authentication test at permissions: username=bob, password=builder, expected result = 200, actual result = 200, SUCCESS
+test_authentication  | write to file
+test_authentication  | =================================================
+test_authentication  | 
+test_authentication  |  ==> Authentication test at permissions: username=clementine, password=mandarine, expected result = 200, actual result = 403, FAILURE
+test_authentication  | write to file
+test_authentication  | =================================================

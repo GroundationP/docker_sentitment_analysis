@@ -1,0 +1,60 @@
+services:
+  fast_api:
+    image: datascientest/fastapi:1.0.0
+    container_name: fast_api
+    networks:
+      - testnet
+    ports:
+      - "8000:8000"
+    environment:
+      discovery.type: single-node
+
+  authentification_test:
+    build:
+      context: .
+      dockerfile: Dockerfile.auth
+    container_name: test_authentication
+    command: bash -c "sleep 1 && pwd && ls && python3 auth_test.py"
+    depends_on:
+      - fast_api
+    environment:
+      - LOG=1
+    volumes:
+      - ./python_script:/script
+    networks:
+      - testnet
+
+
+  authorization_test:
+    build:
+      context: .
+      dockerfile: Dockerfile.authz
+    container_name: test_authorization
+    command: bash -c "sleep 1 && pwd && ls && python3 authz_test.py"
+    depends_on:
+      - authentification_test
+    environment:
+      - LOG=1
+    volumes:
+      - ./python_script:/script
+    networks:
+      - testnet
+
+
+  content_test:
+    build:
+      context: .
+      dockerfile: Dockerfile.content
+    container_name: sentence_test
+    command: bash -c "sleep 1 && pwd && ls && python3 content_test.py"
+    depends_on:
+      - authorization_test
+    environment:
+      - LOG=1
+    volumes:
+      - ./python_script:/script
+    networks:
+      - testnet
+
+networks:
+  testnet:

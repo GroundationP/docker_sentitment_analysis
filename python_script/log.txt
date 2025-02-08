@@ -1,0 +1,168 @@
+Authentification test time: 2025-01-12 14:04:43.978298
+ ==> Authentication test at permissions: username=alice, password=wonderland, expected result = 200, actual result = 200, SUCCESS
+=================================================
+Authentification test time: 2025-01-12 14:04:43.981591
+ ==> Authentication test at permissions: username=bob, password=builder, expected result = 200, actual result = 200, SUCCESS
+=================================================
+Authentification test time: 2025-01-12 14:04:43.986420
+ ==> Authentication test at permissions: username=clementine, password=mandarine, expected result = 200, actual result = 403, FAILURE
+=================================================
+
+Authorization test time for alice at 2025-01-12 14:04:44.030670
+==> Authorization test : The version V1 and V2 works for alice
+=================================================
+Authorization test time for bob at 2025-01-12 14:04:44.036052
+==> Authorization test : The version V1 only works for bob
+=================================================
+
+Content test time for alice using the sentence life is beautiful : 2025-01-12 14:04:44.156966
+==> Content test : {"username":"alice","version":"v1","sentence":"life is beautiful","score":0.5994}
+==> Content test : {"username":"alice","version":"v2","sentence":"life is beautiful","score":0.5994}
+=================================================
+Content test time for alice using the sentence that sucks : 2025-01-12 14:04:44.162410
+==> Content test : {"username":"alice","version":"v1","sentence":"that sucks","score":-0.3612}
+==> Content test : {"username":"alice","version":"v2","sentence":"that sucks","score":-0.3612}
+=================================================
+Content test time for bob using the sentence life is beautiful : 2025-01-12 14:04:44.166223
+==> Content test : {"username":"bob","version":"v1","sentence":"life is beautiful","score":0.5994}
+==> Content test : {"detail":"This service is not included in your plan."}
+=================================================
+Content test time for bob using the sentence that sucks : 2025-01-12 14:04:44.169932
+==> Content test : {"username":"bob","version":"v1","sentence":"that sucks","score":-0.3612}
+==> Content test : {"detail":"This service is not included in your plan."}
+=================================================
+Content test time for clementine using the sentence life is beautiful : 2025-01-12 14:04:44.173104
+==> Content test : {"detail":"Authentication failed"}
+==> Content test : {"detail":"Authentication failed"}
+=================================================
+Content test time for clementine using the sentence that sucks : 2025-01-12 14:04:44.176488
+==> Content test : {"detail":"Authentication failed"}
+==> Content test : {"detail":"Authentication failed"}
+=================================================
+
+Authentification test time: 2025-01-20 09:43:52.814456
+ ==> Authentication test at permissions: username=alice, password=wonderland, expected result = 200, actual result = 200, SUCCESS
+=================================================
+Authentification test time: 2025-01-20 09:43:52.820229
+ ==> Authentication test at permissions: username=bob, password=builder, expected result = 200, actual result = 200, SUCCESS
+=================================================
+Authentification test time: 2025-01-20 09:43:52.824035
+ ==> Authentication test at permissions: username=clementine, password=mandarine, expected result = 200, actual result = 403, FAILURE
+=================================================
+
+Authorization test time for alice at 2025-01-20 09:43:52.844545
+==> Authorization test : The version V1 and V2 works for alice
+=================================================
+Authorization test time for bob at 2025-01-20 09:43:52.853313
+==> Authorization test : The version V1 only works for bob
+=================================================
+
+Content test time for alice using the sentence life is beautiful : 2025-01-20 09:43:52.944738
+==> Content test : {"username":"alice","version":"v1","sentence":"life is beautiful","score":0.5994}
+==> Content test : {"username":"alice","version":"v2","sentence":"life is beautiful","score":0.5994}
+=================================================
+Content test time for alice using the sentence that sucks : 2025-01-20 09:43:52.948549
+==> Content test : {"username":"alice","version":"v1","sentence":"that sucks","score":-0.3612}
+==> Content test : {"username":"alice","version":"v2","sentence":"that sucks","score":-0.3612}
+=================================================
+Content test time for bob using the sentence life is beautiful : 2025-01-20 09:43:52.951520
+==> Content test : {"username":"bob","version":"v1","sentence":"life is beautiful","score":0.5994}
+==> Content test : {"detail":"This service is not included in your plan."}
+=================================================
+Content test time for bob using the sentence that sucks : 2025-01-20 09:43:52.954266
+==> Content test : {"username":"bob","version":"v1","sentence":"that sucks","score":-0.3612}
+==> Content test : {"detail":"This service is not included in your plan."}
+=================================================
+Content test time for clementine using the sentence life is beautiful : 2025-01-20 09:43:52.956764
+==> Content test : {"detail":"Authentication failed"}
+==> Content test : {"detail":"Authentication failed"}
+=================================================
+Content test time for clementine using the sentence that sucks : 2025-01-20 09:43:52.959522
+==> Content test : {"detail":"Authentication failed"}
+==> Content test : {"detail":"Authentication failed"}
+=================================================
+
+Authentification test time: 2025-02-03 21:07:07.452735
+ ==> Authentication test at permissions: username=alice, password=wonderland, expected result = 200, actual result = 200, SUCCESS
+=================================================
+Authentification test time: 2025-02-03 21:07:07.459119
+ ==> Authentication test at permissions: username=bob, password=builder, expected result = 200, actual result = 200, SUCCESS
+=================================================
+Authentification test time: 2025-02-03 21:07:07.461476
+ ==> Authentication test at permissions: username=clementine, password=mandarine, expected result = 200, actual result = 403, FAILURE
+=================================================
+
+Authorization test time for alice at 2025-02-03 21:07:07.483523
+==> Authorization test : The version V1 and V2 works for alice
+=================================================
+Authorization test time for bob at 2025-02-03 21:07:07.492588
+==> Authorization test : The version V1 only works for bob
+=================================================
+
+Content test time for alice using the sentence life is beautiful : 2025-02-03 21:07:07.587887
+==> Content test : {"username":"alice","version":"v1","sentence":"life is beautiful","score":0.5994}
+==> Content test : {"username":"alice","version":"v2","sentence":"life is beautiful","score":0.5994}
+=================================================
+Content test time for alice using the sentence that sucks : 2025-02-03 21:07:07.593539
+==> Content test : {"username":"alice","version":"v1","sentence":"that sucks","score":-0.3612}
+==> Content test : {"username":"alice","version":"v2","sentence":"that sucks","score":-0.3612}
+=================================================
+Content test time for bob using the sentence life is beautiful : 2025-02-03 21:07:07.596719
+==> Content test : {"username":"bob","version":"v1","sentence":"life is beautiful","score":0.5994}
+==> Content test : {"detail":"This service is not included in your plan."}
+=================================================
+Content test time for bob using the sentence that sucks : 2025-02-03 21:07:07.599320
+==> Content test : {"username":"bob","version":"v1","sentence":"that sucks","score":-0.3612}
+==> Content test : {"detail":"This service is not included in your plan."}
+=================================================
+Content test time for clementine using the sentence life is beautiful : 2025-02-03 21:07:07.602559
+==> Content test : {"detail":"Authentication failed"}
+==> Content test : {"detail":"Authentication failed"}
+=================================================
+Content test time for clementine using the sentence that sucks : 2025-02-03 21:07:07.605240
+==> Content test : {"detail":"Authentication failed"}
+==> Content test : {"detail":"Authentication failed"}
+=================================================
+
+Authentification test time: 2025-02-07 17:52:40.129680
+ ==> Authentication test at permissions: username=alice, password=wonderland, expected result = 200, actual result = 200, SUCCESS
+=================================================
+Authentification test time: 2025-02-07 17:52:40.137146
+ ==> Authentication test at permissions: username=bob, password=builder, expected result = 200, actual result = 200, SUCCESS
+=================================================
+Authorization test time for alice at 2025-02-07 17:52:40.139499
+==> Authorization test : The version V1 and V2 works for alice
+=================================================
+Authentification test time: 2025-02-07 17:52:40.142671
+ ==> Authentication test at permissions: username=clementine, password=mandarine, expected result = 200, actual result = 403, FAILURE
+=================================================
+
+Authorization test time for bob at 2025-02-07 17:52:40.151344
+==> Authorization test : The version V1 only works for bob
+=================================================
+
+Content test time for alice using the sentence life is beautiful : 2025-02-07 17:52:40.249894
+==> Content test : {"username":"alice","version":"v1","sentence":"life is beautiful","score":0.5994}
+==> Content test : {"username":"alice","version":"v2","sentence":"life is beautiful","score":0.5994}
+=================================================
+Content test time for alice using the sentence that sucks : 2025-02-07 17:52:40.260752
+==> Content test : {"username":"alice","version":"v1","sentence":"that sucks","score":-0.3612}
+==> Content test : {"username":"alice","version":"v2","sentence":"that sucks","score":-0.3612}
+=================================================
+Content test time for bob using the sentence life is beautiful : 2025-02-07 17:52:40.268342
+==> Content test : {"username":"bob","version":"v1","sentence":"life is beautiful","score":0.5994}
+==> Content test : {"detail":"This service is not included in your plan."}
+=================================================
+Content test time for bob using the sentence that sucks : 2025-02-07 17:52:40.277118
+==> Content test : {"username":"bob","version":"v1","sentence":"that sucks","score":-0.3612}
+==> Content test : {"detail":"This service is not included in your plan."}
+=================================================
+Content test time for clementine using the sentence life is beautiful : 2025-02-07 17:52:40.287640
+==> Content test : {"detail":"Authentication failed"}
+==> Content test : {"detail":"Authentication failed"}
+=================================================
+Content test time for clementine using the sentence that sucks : 2025-02-07 17:52:40.298862
+==> Content test : {"detail":"Authentication failed"}
+==> Content test : {"detail":"Authentication failed"}
+=================================================
+
