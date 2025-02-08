@@ -17,6 +17,8 @@ Each test will be executed in separate containers and will generate a log file d
 
 ####  Setup
 mkdir sent_an
+
 cd sent_an
+
 ./setup.sh
 
