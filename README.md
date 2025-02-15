@@ -16,9 +16,8 @@ Authorization Test: It ensures that bob has access to version v1 only, while Ali
 Each test will be executed in separate containers and will generate a log file describing the results of each test.
 
 ####  Setup
+```
 mkdir sent_an
-
 cd sent_an
-
 ./setup.sh
-
+```
